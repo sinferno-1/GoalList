@@ -2,5 +2,5 @@
 An app to track your goals setup in react native                                                       
 # Tech Stack Used:                              
 ●JavaScript                                                                                                                  
-●React-Native JS
+●React-Native JS                                                                                                         
 ●Expo
