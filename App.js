@@ -26,7 +26,7 @@ export default function App() {
     function deleteGoalHandler(id){
       setCourseGoals(currentcoursegoals=>{
         return currentcoursegoals.filter((goal)=>goal.id!==id);
-        
+
       })
       console.log('DELETE');
     }
@@ -39,7 +39,7 @@ export default function App() {
       
     <GoalInput onAddGoal={addgoalhandler}/>
 
-      <View style={styles.goals}>
+      <View style={styles.goal}>
         <Text style={styles.head}>List of Goals</Text>
 
         <FlatList
@@ -54,7 +54,7 @@ export default function App() {
             return item.id;
           }}
 
-          // alwaysBounceVertical={false}
+          alwaysBounceVertical={false}
         />
       </View>
     </View>
@@ -72,16 +72,19 @@ const styles = StyleSheet.create({
 
   head: {
     // marginBottom: 20,
-    marginTop: 15,
-    marginBottom: 35,
+    marginTop: 10,
+    marginBottom: 0,
+    flex: 1,
   },
 
   goal: {
-    borderColor: "green",
-    margin: 12,
-    padding: 8,
+    borderColor: "red",
+    margin: 3,
+    padding: 2,
     borderRadius: 8,
-    backgroundColor: "green",
+    backgroundColor: "white",
     borderWidth: 1,
+    flex: 1,
+    marginTop: 50,
   },
 });

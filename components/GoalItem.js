@@ -5,13 +5,13 @@ function GoalItem(props){
 
   return(
   
-    <Pressable onPress={props.onDeleteItem.bind(this, props.id)}>
     <View style={styles.goal}>
+    <Pressable android_ripple={{color: 'lightgreen'}} onPress={props.onDeleteItem.bind(this, props.id)}>
 
     <Text style={styles.t1}> {props.text} </Text>
 
-    </View>
     </Pressable>
+    </View>
     
   );
 
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
 
     t1: {
         color: 'black',
-        margin: 1,
+        // margin: 1,
         borderColor: 'green',
         borderWidth: 1,
         padding: 8,
@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
       goals: {
         flex: 3,
         margin: 8,
-        padding: 8,
+        // padding: 8,
+        // paddingBottom: 10,
       },
 
 
